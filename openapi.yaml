@@ -1,0 +1,70 @@
+openapi: 3.0.4
+info:
+  title: VPN Proxy Detector
+  description: VPN Detector is a simple tool for detecting VPN usage. It returns a boolean value indicating whether the IP address is using a VPN or not.
+  termsOfService: https://apiverve.com/terms/
+  contact:
+    name: APIVerve Support
+    email: hello@apiverve.com
+    url: https://apiverve.com/contact
+  version: 1.0.9
+externalDocs:
+  description: Learn more about APIVerve
+  url: https://docs.apiverve.com?utm_source=openapi
+servers:
+- url: https://api.apiverve.com/
+paths:
+  /v1/vpndetector:
+    get:
+      summary: Detect VPN Usage
+      description: VPN Detector is a simple tool for detecting VPN usage. It returns a boolean value indicating whether the IP address is using a VPN or not.
+      operationId: vpndetector
+      parameters:
+      - name: ip
+        in: query
+        schema:
+          type: string
+        required: true
+        description: The IP address you want to check for VPN usage
+        example: 103.62.49.210
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: status
+                  error:
+                    type: string
+                    description: error
+                  data:
+                    type: string
+                    description: data
+              example:
+                status: ok
+                error: 
+                data:
+                  ip: 103.62.49.210
+                  is_vpn: false
+                  is_datacenter: true
+                  checked_on: 2025-02-20
+                  risk_level: High
+                  threat_level: Moderate
+        '401':
+          description: Your request was not authorized, or your API Key was invalid
+        '404':
+          description: Requested resource was not found
+        '500':
+          description: A server error has occured, try again later
+components:
+  securitySchemes:
+    api_key:
+      type: apiKey
+      name: x-api-key
+      in: header
+security:
+- api_key: []
