@@ -17,14 +17,11 @@ def call_vpndetector_api():
     Make a GET request to the VPN Proxy Detector API
     """
     try:
-        # Query parameters
-        params &#x3D; {&#x27;ip&#x27;: &#x27;103.62.49.210&#x27;}
-
         headers = {
             'x-api-key': API_KEY
         }
 
-        response = requests.get(API_URL, headers=headers, params=params)
+        response = requests.get(API_URL, headers=headers)
 
         # Raise exception for HTTP errors
         response.raise_for_status()
