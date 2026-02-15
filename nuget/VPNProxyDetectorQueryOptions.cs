@@ -12,7 +12,6 @@ namespace APIVerve.API.VPNProxyDetector
     {
         /// <summary>
         /// The IP address you want to check for VPN usage
-        /// Example: 103.62.49.210
         /// </summary>
         [JsonProperty("ip")]
         public string Ip { get; set; }
