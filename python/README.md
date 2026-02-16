@@ -221,8 +221,9 @@ from apiverve_vpnproxydetector.apiClient import VpndetectorAPIClient
 
 api = VpndetectorAPIClient("[YOUR_API_KEY]")
 
+query = { "ip": "103.62.49.210" }
+
 try:
-    query = { "ip": "103.62.49.210" }
     result = api.execute(query)
     print(result)
 finally:
