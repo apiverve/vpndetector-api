@@ -13,7 +13,12 @@ const API_URL = 'https://api.apiverve.com/v1/vpndetector';
  */
 async function callVPNProxyDetectorAPI() {
   try {
-    const response = await fetch(API_URL, {
+    // Query parameters
+    const params &#x3D; new URLSearchParams({
+            ip: &#x27;103.62.49.210&#x27;
+        });
+
+    const response = await fetch(`${API_URL}?${params}`, {
       method: 'GET',
       headers: {
         'x-api-key': API_KEY
