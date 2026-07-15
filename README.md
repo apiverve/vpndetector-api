@@ -30,7 +30,11 @@ The VPN Proxy Detector API provides a simple, reliable way to integrate vpn prox
 ```javascript
 async function callVPNProxyDetectorAPI() {
     try {
-        const response = await fetch('https://api.apiverve.com/v1/vpndetector', {
+        const params = new URLSearchParams({
+            ip: '103.62.49.210'
+        });
+
+        const response = await fetch(`https://api.apiverve.com/v1/vpndetector?${params}`, {
             method: 'GET',
             headers: {
                 'x-api-key': 'YOUR_API_KEY_HERE'
@@ -50,7 +54,7 @@ callVPNProxyDetectorAPI();
 ### Using cURL
 
 ```bash
-curl -X GET "https://api.apiverve.com/v1/vpndetector?param=value" \
+curl -X GET "https://api.apiverve.com/v1/vpndetector?ip=103.62.49.210" \
   -H "x-api-key: YOUR_API_KEY_HERE"
 ```
 
@@ -150,7 +154,7 @@ go get github.com/apiverve/vpndetector-api/go
 |---------|---------|
 | **Multi-language SDKs** | Native packages for JavaScript, Python, C#, Go, and Android |
 | **Simple Integration** | Single API key authentication, consistent response format |
-| **Production Ready** | 99.9% uptime, fast response times, used by thousands of developers |
+| **Production Ready** | 99.9% uptime SLA, served from 24 global regions |
 | **Comprehensive Docs** | Full examples, OpenAPI spec, and dedicated support |
 
 ---
@@ -169,7 +173,7 @@ go get github.com/apiverve/vpndetector-api/go
 The VPN Proxy Detector API is commonly used for:
 
 - **Web Applications** - Add vpn proxy detector features to your frontend or backend
-- **Mobile Apps** - Native SDKs for iOS and Android development
+- **Mobile Apps** - Native SDKs for Android development
 - **Automation** - Integrate with n8n, Zapier, or custom workflows
 - **SaaS Products** - Enhance your product with vpn proxy detector capabilities
 - **Data Pipelines** - Process and analyze data at scale
