@@ -25,6 +25,9 @@ namespace APIVerve.API.VPNProxyDetector
 
         [JsonProperty("data")]
         public Data Data { get; set; }
+
+        [JsonProperty("premium")]
+        public Premium Premium { get; set; }
     }
 
     public partial class Data
@@ -33,18 +36,30 @@ namespace APIVerve.API.VPNProxyDetector
         public string Ip { get; set; }
 
         [JsonProperty("is_vpn")]
-        public bool IsVpn { get; set; }
+        public bool? IsVpn { get; set; }
 
         [JsonProperty("is_datacenter")]
-        public bool IsDatacenter { get; set; }
+        public bool? IsDatacenter { get; set; }
 
         [JsonProperty("checked_on")]
-        public DateTimeOffset CheckedOn { get; set; }
+        public DateTimeOffset? CheckedOn { get; set; }
 
         [JsonProperty("risk_level")]
         public string RiskLevel { get; set; }
 
         [JsonProperty("threat_level")]
         public string ThreatLevel { get; set; }
+    }
+
+    public partial class Premium
+    {
+        [JsonProperty("message")]
+        public string Message { get; set; }
+
+        [JsonProperty("upgrade_url")]
+        public Uri UpgradeUrl { get; set; }
+
+        [JsonProperty("locked_fields")]
+        public string[] LockedFields { get; set; }
     }
 }
