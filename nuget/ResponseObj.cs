@@ -41,6 +41,15 @@ namespace APIVerve.API.VPNProxyDetector
         [JsonProperty("is_datacenter")]
         public bool? IsDatacenter { get; set; }
 
+        [JsonProperty("is_tor")]
+        public bool? IsTor { get; set; }
+
+        [JsonProperty("asn")]
+        public string Asn { get; set; }
+
+        [JsonProperty("asn_name")]
+        public string AsnName { get; set; }
+
         [JsonProperty("checked_on")]
         public DateTimeOffset? CheckedOn { get; set; }
 
