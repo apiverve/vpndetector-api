@@ -28,6 +28,9 @@ declare module '@apiverve/vpndetector' {
       ip:           null | string;
       isVPN:        boolean | null;
       isDatacenter: boolean | null;
+      isTor:        boolean | null;
+      asn:          null | string;
+      asnName:      null | string;
       checkedOn:    Date | null;
       riskLevel:    null | string;
       threatLevel:  null | string;

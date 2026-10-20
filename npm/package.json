@@ -1,7 +1,7 @@
 {
   "name": "@apiverve/vpndetector",
-  "version": "1.2.0",
-  "description": "VPN Detector is a simple tool for detecting VPN usage. It returns a boolean value indicating whether the IP address is using a VPN or not.",
+  "version": "1.2.2",
+  "description": "VPN Proxy Detector checks any IP address to detect active VPN connections and cloud datacenter hosting. Lookups return boolean flags for VPN and datacenter status plus the verification date, with paid tiers adding Tor detection and risk levels.",
   "main": "index.js",
   "types": "index.d.ts",
   "sideEffects": false,
@@ -23,7 +23,7 @@
     "directory": "npm"
   },
   "keywords": [
-    "vpn detector", "vpn detection", "vpn detect", "vpn api", "vpn tool"
+    "proxy detection api", "vpn detection api", "proxy checker api", "vpn detector api", "vpn api"
   ],
   "author": {
     "name": "APIVerve",
@@ -34,7 +34,7 @@
   "bugs": {
     "url": "https://github.com/apiverve/vpndetector-api/issues"
   },
-  "homepage": "https://apiverve.com/marketplace/vpndetector?utm_source=npm&utm_medium=homepage",
+  "homepage": "https://apiverve.com/marketplace/vpndetector?utm_source=npm&utm_medium=referral&utm_content=homepage",
   "devDependencies": {
     "mocha": "^11.0.1",
     "chai": "^5.1.2",

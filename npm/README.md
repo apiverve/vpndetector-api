@@ -1,13 +1,10 @@
 # VPN Proxy Detector API
 
-VPN Detector is a simple tool for detecting VPN usage. It returns a boolean value indicating whether the IP address is using a VPN or not.
+VPN Proxy Detector checks any IP address to detect active VPN connections and cloud datacenter hosting. Lookups return boolean flags for VPN and datacenter status plus the verification date, with paid tiers adding Tor detection and risk levels.
 
-![Build Status](https://img.shields.io/badge/build-passing-green)
-![Code Climate](https://img.shields.io/badge/maintainability-B-purple)
-![Prod Ready](https://img.shields.io/badge/production-ready-blue)
 [![npm version](https://img.shields.io/npm/v/@apiverve/vpndetector.svg)](https://www.npmjs.com/package/@apiverve/vpndetector)
 
-This is a Javascript Wrapper for the [VPN Proxy Detector API](https://apiverve.com/marketplace/vpndetector?utm_source=npm&utm_medium=readme)
+This is a JavaScript wrapper for the [VPN Proxy Detector API](https://apiverve.com/marketplace/vpndetector?utm_source=npm&utm_medium=referral&utm_content=readme)
 
 ---
 
@@ -28,15 +25,15 @@ yarn add @apiverve/vpndetector
 ## Configuration
 
 Before using the VPN Proxy Detector API client, you have to setup your account and obtain your API Key.
-You can get it by signing up at [https://apiverve.com](https://apiverve.com?utm_source=npm&utm_medium=readme)
+You can get it by signing up at [https://apiverve.com](https://apiverve.com?utm_source=npm&utm_medium=referral&utm_content=readme)
 
 ---
 
 ## Quick Start
 
-[Get started with the Quick Start Guide](https://docs.apiverve.com/quickstart?utm_source=npm&utm_medium=readme)
+[Get started with the Quick Start Guide](https://docs.apiverve.com/quickstart?utm_source=npm&utm_medium=referral&utm_content=readme)
 
-The VPN Proxy Detector API documentation is found here: [https://docs.apiverve.com/ref/vpndetector](https://docs.apiverve.com/ref/vpndetector?utm_source=npm&utm_medium=readme).
+The VPN Proxy Detector API documentation is found here: [https://docs.apiverve.com/ref/vpndetector](https://docs.apiverve.com/ref/vpndetector?utm_source=npm&utm_medium=referral&utm_content=readme).
 You can find parameters, example responses, and status codes documented here.
 
 ### Setup
@@ -125,9 +122,12 @@ async function makeRequest() {
     "ip": "103.62.49.210",
     "is_vpn": false,
     "is_datacenter": true,
-    "checked_on": "2025-12-16",
-    "risk_level": "High",
-    "threat_level": "Moderate"
+    "is_tor": false,
+    "asn": "AS137409",
+    "asn_name": "GSLNETWORKS-AS-AP GSL Networks Pty LTD",
+    "checked_on": "2026-09-14",
+    "risk_level": "Moderate",
+    "threat_level": "Low"
   }
 }
 ```
@@ -136,7 +136,7 @@ async function makeRequest() {
 
 ## Customer Support
 
-Need any assistance? [Get in touch with Customer Support](https://apiverve.com/contact?utm_source=npm&utm_medium=readme).
+Need any assistance? [Get in touch with Customer Support](https://apiverve.com/contact?utm_source=npm&utm_medium=referral&utm_content=readme).
 
 ---
 
@@ -148,12 +148,12 @@ Stay up to date by following [@apiverveHQ](https://twitter.com/apiverveHQ) on Tw
 
 ## Legal
 
-All usage of the APIVerve website, API, and services is subject to the [APIVerve Terms of Service](https://apiverve.com/terms?utm_source=npm&utm_medium=readme), [Privacy Policy](https://apiverve.com/privacy?utm_source=npm&utm_medium=readme), and [Refund Policy](https://apiverve.com/refund?utm_source=npm&utm_medium=readme).
+All usage of the APIVerve website, API, and services is subject to the [APIVerve Terms of Service](https://apiverve.com/terms?utm_source=npm&utm_medium=referral&utm_content=readme) and [Privacy Policy](https://apiverve.com/privacy?utm_source=npm&utm_medium=referral&utm_content=readme).
 
 ---
 
 ## License
-Licensed under the The MIT License (MIT)
+Licensed under the MIT License (MIT)
 
 Copyright (&copy;) 2026 APIVerve, and EvlarSoft LLC
 
