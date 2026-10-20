@@ -1,13 +1,13 @@
-# [VPN Proxy Detector API](https://apiverve.com/marketplace/vpndetector?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+# [VPN Proxy Detector API](https://apiverve.com/marketplace/vpndetector?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 
-VPN Detector is a simple tool for detecting VPN usage. It returns a boolean value indicating whether the IP address is using a VPN or not.
+VPN Proxy Detector checks any IP address to detect active VPN connections and cloud datacenter hosting. Lookups return boolean flags for VPN and datacenter status plus the verification date, with paid tiers adding Tor detection and risk levels.
 
 The VPN Proxy Detector API provides a simple, reliable way to integrate vpn proxy detector functionality into your applications. Built for developers who need production-ready vpn proxy detector capabilities without the complexity of building from scratch.
 
-**[View API Details →](https://apiverve.com/marketplace/vpndetector?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)**
+**[View API Details →](https://apiverve.com/marketplace/vpndetector?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![API Status](https://img.shields.io/badge/Status-Active-green.svg)](https://apiverve.com/marketplace/vpndetector?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+[![API Status](https://img.shields.io/badge/Status-Active-green.svg)](https://apiverve.com/marketplace/vpndetector?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 [![Method](https://img.shields.io/badge/Method-GET-blue.svg)](#)
 [![Platform](https://img.shields.io/badge/Platform-Multi--Platform-orange.svg)](#installation)
 
@@ -161,7 +161,7 @@ go get github.com/apiverve/vpndetector-api/go
 
 ## Documentation
 
-- 🏠 **API Home:** [VPN Proxy Detector API](https://apiverve.com/marketplace/vpndetector?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+- 🏠 **API Home:** [VPN Proxy Detector API](https://apiverve.com/marketplace/vpndetector?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 - 📚 **API Reference:** [docs.apiverve.com/ref/vpndetector](https://docs.apiverve.com/ref/vpndetector)
 - 📖 **OpenAPI Spec:** [openapi.yaml](./openapi.yaml)
 - 💡 **Examples:** [examples/](./examples/)
@@ -191,11 +191,36 @@ x-api-key: YOUR_API_KEY_HERE
 Get your API key: [https://apiverve.com](https://apiverve.com)
 
 ### Response Format
-All responses are JSON with this structure:
+
+Every APIVerve endpoint returns the same envelope — check `status`, then read `data`:
+
 ```json
 {
   "status": "ok",
+  "error": null,
   "data": { ... }
+}
+```
+
+### Example Response
+
+A real response from the VPN Proxy Detector API:
+
+```json
+{
+  "status": "ok",
+  "error": null,
+  "data": {
+    "ip": "103.62.49.210",
+    "is_vpn": false,
+    "is_datacenter": true,
+    "is_tor": false,
+    "asn": "AS137409",
+    "asn_name": "GSLNETWORKS-AS-AP GSL Networks Pty LTD",
+    "checked_on": "2026-09-14",
+    "risk_level": "Moderate",
+    "threat_level": "Low"
+  }
 }
 ```
 
@@ -203,7 +228,7 @@ All responses are JSON with this structure:
 
 ## Support & Community
 
-- 🏠 **API Home**: [VPN Proxy Detector API](https://apiverve.com/marketplace/vpndetector?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+- 🏠 **API Home**: [VPN Proxy Detector API](https://apiverve.com/marketplace/vpndetector?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 - 💬 **Support**: [https://apiverve.com/contact](https://apiverve.com/contact)
 - 🐛 **Issues**: [GitHub Issues](../../issues)
 - 📖 **Documentation**: [https://docs.apiverve.com](https://docs.apiverve.com)

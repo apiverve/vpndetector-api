@@ -2,8 +2,10 @@ openapi: 3.0.4
 info:
   title: VPN Proxy Detector
   description: >-
-    VPN Detector is a simple tool for detecting VPN usage. It returns a boolean
-    value indicating whether the IP address is using a VPN or not.
+    VPN Proxy Detector checks any IP address to detect active VPN connections
+    and cloud datacenter hosting. Lookups return boolean flags for VPN and
+    datacenter status plus the verification date, with paid tiers adding Tor
+    detection and risk levels.
   termsOfService: https://apiverve.com/terms/
   contact:
     name: APIVerve Support
@@ -18,7 +20,7 @@ servers:
 paths:
   /v1/vpndetector:
     get:
-      summary: Detect VPN Usage
+      summary: VPN Proxy Detector
       description: >-
         VPN Detector is a simple tool for detecting VPN usage. It returns a
         boolean value indicating whether the IP address is using a VPN or not.
@@ -55,9 +57,12 @@ paths:
                   ip: 103.62.49.210
                   is_vpn: false
                   is_datacenter: true
-                  checked_on: '2025-12-16'
-                  risk_level: High
-                  threat_level: Moderate
+                  is_tor: false
+                  asn: AS137409
+                  asn_name: GSLNETWORKS-AS-AP GSL Networks Pty LTD
+                  checked_on: '2026-09-14'
+                  risk_level: Moderate
+                  threat_level: Low
         '401':
           description: Your request was not authorized, or your API Key was invalid
         '404':
