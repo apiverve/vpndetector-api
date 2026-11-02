@@ -215,9 +215,12 @@ A real response from the VPN Proxy Detector API:
     "is_vpn": false,
     "is_datacenter": true,
     "is_tor": false,
+    "is_relay": false,
+    "is_public": true,
     "asn": "AS137409",
     "asn_name": "GSLNETWORKS-AS-AP GSL Networks Pty LTD",
-    "checked_on": "2026-09-14",
+    "hosting_provider": null,
+    "checked_on": "2026-10-26",
     "risk_level": "Moderate",
     "threat_level": "Low"
   }
