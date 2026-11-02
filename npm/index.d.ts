@@ -25,15 +25,18 @@ declare module '@apiverve/vpndetector' {
 
 
   interface VPNProxyDetectorData {
-      ip:           null | string;
-      isVPN:        boolean | null;
-      isDatacenter: boolean | null;
-      isTor:        boolean | null;
-      asn:          null | string;
-      asnName:      null | string;
-      checkedOn:    Date | null;
-      riskLevel:    null | string;
-      threatLevel:  null | string;
+      ip:              null | string;
+      isVPN:           boolean | null;
+      isDatacenter:    boolean | null;
+      isTor:           boolean | null;
+      isRelay:         boolean | null;
+      isPublic:        boolean | null;
+      asn:             null | string;
+      asnName:         null | string;
+      hostingProvider: null;
+      checkedOn:       Date | null;
+      riskLevel:       null | string;
+      threatLevel:     null | string;
   }
 
   export default class vpndetectorWrapper {
