@@ -44,11 +44,20 @@ namespace APIVerve.API.VPNProxyDetector
         [JsonProperty("is_tor")]
         public bool? IsTor { get; set; }
 
+        [JsonProperty("is_relay")]
+        public bool? IsRelay { get; set; }
+
+        [JsonProperty("is_public")]
+        public bool? IsPublic { get; set; }
+
         [JsonProperty("asn")]
         public string Asn { get; set; }
 
         [JsonProperty("asn_name")]
         public string AsnName { get; set; }
+
+        [JsonProperty("hosting_provider")]
+        public object HostingProvider { get; set; }
 
         [JsonProperty("checked_on")]
         public DateTimeOffset? CheckedOn { get; set; }
